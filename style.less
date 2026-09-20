@@ -1,0 +1,323 @@
+@green: rgb(187, 224, 189);
+@red: rgba(226, 102, 102, 0.712);
+@blue: rgba(102, 149, 226, 0.712);
+
+@shadowBlueOp4: rgba(1, 127, 237, 0.4) 0px 0px 0px 3px;
+@shadowBlueOp3: rgba(1, 127, 237, 0.3) 0px 0px 0px 6px;
+@shadowBlueOp2: rgba(1, 127, 237, 0.2) 0px 0px 0px 9px;
+@shadowBlueOp1: rgba(1, 127, 237, 0.1) 0px 0px 0px 12px;
+
+html, body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+body {
+    position: relative;
+}
+
+.container {
+    text-align: center;
+}
+
+.volume100 {
+    box-shadow: @shadowBlueOp4, @shadowBlueOp3, @shadowBlueOp2, @shadowBlueOp1;
+}
+.volume75 {
+    box-shadow: @shadowBlueOp4, @shadowBlueOp3, @shadowBlueOp2;
+}
+.volume50 {
+    box-shadow: @shadowBlueOp4, @shadowBlueOp3;
+}
+.volume25 {
+    box-shadow: @shadowBlueOp4;
+}
+
+.svg-button {
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgb(222, 221, 221);
+    margin: 0 0.5em;
+    margin-bottom: 0.6em;
+
+    &:hover {
+        background-color: @green;
+        cursor: pointer;
+    }
+
+    svg {
+        padding: 0.5em;
+        width: 3em;
+    }
+}
+
+.text-gray {
+    color: rgba(128, 128, 128, 0.43);
+}
+
+p.text-gray {
+    line-height: 0.5em;
+}
+
+.sour-gummy {
+  &-regular {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+  }
+  &-light {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+  }
+}
+
+.tab-button {
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 1vh 0.2vw;
+    padding: 5px;
+    font-size: 1.2em;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 6em; 
+
+    &.active {
+        border-bottom: 5px solid @green;
+        transition: border-bottom 0.2s ease;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    .icon {
+        font-size: 1em;
+        margin-bottom: 4px;
+    }
+}
+
+.tab-content {
+    transition: display 0.4s ease;
+    display: block;
+    margin: 3vh 0;
+
+    textarea {
+        border: 3px solid @green;
+        box-shadow: 0 3px 8px rgb(108, 56, 0);
+        outline: none; 
+        transition: border 0.2s ease;
+        font-size: 1.3em;
+        max-width: 80vw;
+
+        &:focus {
+            border-color: darken(@green, 30%);
+        }
+    }
+}
+
+button.time-control {
+    margin: 2em 0;
+    border-radius: 10%;
+    font-size: 0.5em;
+    height: 5em;
+    padding: 0 0.5em;
+    cursor: pointer;
+
+    // &:active {
+    //     margin-top: 4em;
+    // }
+
+    svg {
+        padding: 0.5em;
+        width: 3em;
+    }
+}
+
+button {
+    &.plusminus5 {
+        border-radius: 10%;
+        font-size: 1em;
+        padding: 0 0.5em;
+        cursor: pointer;
+        margin: 0 0.5rem;
+    }
+}
+
+button#pause-time {
+    background-color: @blue;
+}
+button#start-time {
+    background-color: @green;
+}
+button#stop-time {
+    background-color: @red;
+}
+
+.time-input {
+    width: 3em;
+    height: 2em;
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 10%;
+    border: none;
+    margin-left: 5px;
+}
+
+h1 {
+    &#time {
+        font-size: 3em;
+    }
+}
+
+span {
+    &#time-status {
+        color: @blue;
+        line-height: 0;
+        display: block;
+    }
+}
+
+#time-inputs {
+    border: 2px solid @green;
+    border-radius: 10%;
+    padding: 1em;
+    display: inline-block;
+}
+
+div#footer {
+    display: block;
+    height: 15vh;
+
+    footer {
+        width: 100%;
+        padding: 2em 0;
+        position: absolute;
+        bottom: 0;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            span:first-of-type {
+                padding: 0.6em;
+            }
+            span:last-of-type {
+                color: rgb(162, 149, 10);
+            }
+        }
+
+        #logo {
+            height: 3vh;
+        }
+    }
+}
+
+
+input#timer-name {
+    font-size: 1em;
+    text-align: center;
+    border: none;
+    margin-bottom: 5px;
+}
+
+div#past-timers {
+    max-height: 20vh;
+    max-width: 15%;
+    margin: 0 auto;
+    // overflow: scroll;
+    // scrollbar-width: none;
+    // overflow-x: hidden;
+
+    button {
+        display: inline;
+        font-size: 0.7em;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+    }
+
+    span {
+        font-size: 1.3em;
+        padding: 5px 2px;
+    }
+    
+    table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        width: 100%;
+
+        tbody {
+            tr:nth-child(odd) {
+                background-color: rgba(187, 224, 189, 0.536);
+            }
+
+            tr:nth-child(even) {
+                background-color: @green;
+            }
+        }
+    }
+}
+
+
+////////////////////////////////////////////////
+// Laptop  
+////////////////////////////////////////////////
+@media screen and (max-width: 1440px) {
+    div#past-timers {
+        max-width: 100%;
+    }
+}
+
+////////////////////////////////////////////////
+// Mobile
+////////////////////////////////////////////////
+@media screen and (max-width: 450px) {
+    .svg-button {
+        margin: 0.3em 0.3em;
+
+        svg {
+            padding: 0.5em;
+            width: 1.5em;
+        }
+    }
+
+    .tab-button {
+        background-color: inherit;
+        border: none;
+        border-bottom: 1px solid gray;
+        margin: 1vh 0.2vw;
+        padding: 2px;
+        font-size: 1.0em;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 6em; 
+
+        &.active {
+            border-bottom: 5px solid @green;
+            transition: border-bottom 0.2s ease;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .icon {
+            font-size: 0.7em;
+            margin-bottom: 4px;
+        }
+    }
+}

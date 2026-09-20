@@ -1,0 +1,10 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "scripts": {
+    "watch-less": "chokidar style.less -c \"lessc style.less style.css\""
+  },
+  "dependencies": {
+    "less": "^4.3.0"
+  }
+}

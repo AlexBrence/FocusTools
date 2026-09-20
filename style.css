@@ -1,0 +1,245 @@
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+body {
+  position: relative;
+}
+.container {
+  text-align: center;
+}
+.volume100 {
+  box-shadow: rgba(1, 127, 237, 0.4) 0px 0px 0px 3px, rgba(1, 127, 237, 0.3) 0px 0px 0px 6px, rgba(1, 127, 237, 0.2) 0px 0px 0px 9px, rgba(1, 127, 237, 0.1) 0px 0px 0px 12px;
+}
+.volume75 {
+  box-shadow: rgba(1, 127, 237, 0.4) 0px 0px 0px 3px, rgba(1, 127, 237, 0.3) 0px 0px 0px 6px, rgba(1, 127, 237, 0.2) 0px 0px 0px 9px;
+}
+.volume50 {
+  box-shadow: rgba(1, 127, 237, 0.4) 0px 0px 0px 3px, rgba(1, 127, 237, 0.3) 0px 0px 0px 6px;
+}
+.volume25 {
+  box-shadow: rgba(1, 127, 237, 0.4) 0px 0px 0px 3px;
+}
+.svg-button {
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #dedddd;
+  margin: 0 0.5em;
+  margin-bottom: 0.6em;
+}
+.svg-button:hover {
+  background-color: #bbe0bd;
+  cursor: pointer;
+}
+.svg-button svg {
+  padding: 0.5em;
+  width: 3em;
+}
+.text-gray {
+  color: rgba(128, 128, 128, 0.43);
+}
+p.text-gray {
+  line-height: 0.5em;
+}
+.sour-gummy-regular {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.sour-gummy-light {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.tab-button {
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid gray;
+  margin: 1vh 0.2vw;
+  padding: 5px;
+  font-size: 1.2em;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 6em;
+}
+.tab-button.active {
+  border-bottom: 5px solid #bbe0bd;
+  transition: border-bottom 0.2s ease;
+}
+.tab-button:hover {
+  cursor: pointer;
+}
+.tab-button .icon {
+  font-size: 1em;
+  margin-bottom: 4px;
+}
+.tab-content {
+  transition: display 0.4s ease;
+  display: block;
+  margin: 3vh 0;
+}
+.tab-content textarea {
+  border: 3px solid #bbe0bd;
+  box-shadow: 0 3px 8px #6c3800;
+  outline: none;
+  transition: border 0.2s ease;
+  font-size: 1.3em;
+  max-width: 80vw;
+}
+.tab-content textarea:focus {
+  border-color: #52b057;
+}
+button.time-control {
+  margin: 2em 0;
+  border-radius: 10%;
+  font-size: 0.5em;
+  height: 5em;
+  padding: 0 0.5em;
+  cursor: pointer;
+}
+button.time-control svg {
+  padding: 0.5em;
+  width: 3em;
+}
+button.plusminus5 {
+  border-radius: 10%;
+  font-size: 1em;
+  padding: 0 0.5em;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+button#pause-time {
+  background-color: rgba(102, 149, 226, 0.712);
+}
+button#start-time {
+  background-color: #bbe0bd;
+}
+button#stop-time {
+  background-color: rgba(226, 102, 102, 0.712);
+}
+.time-input {
+  width: 3em;
+  height: 2em;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 10%;
+  border: none;
+  margin-left: 5px;
+}
+h1#time {
+  font-size: 3em;
+}
+span#time-status {
+  color: rgba(102, 149, 226, 0.712);
+  line-height: 0;
+  display: block;
+}
+#time-inputs {
+  border: 2px solid #bbe0bd;
+  border-radius: 10%;
+  padding: 1em;
+  display: inline-block;
+}
+div#footer {
+  display: block;
+  height: 15vh;
+}
+div#footer footer {
+  width: 100%;
+  padding: 2em 0;
+  position: absolute;
+  bottom: 0;
+}
+div#footer footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div#footer footer div span:first-of-type {
+  padding: 0.6em;
+}
+div#footer footer div span:last-of-type {
+  color: #a2950a;
+}
+div#footer footer #logo {
+  height: 3vh;
+}
+input#timer-name {
+  font-size: 1em;
+  text-align: center;
+  border: none;
+  margin-bottom: 5px;
+}
+div#past-timers {
+  max-height: 20vh;
+  max-width: 15%;
+  margin: 0 auto;
+}
+div#past-timers button {
+  display: inline;
+  font-size: 0.7em;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+div#past-timers span {
+  font-size: 1.3em;
+  padding: 5px 2px;
+}
+div#past-timers table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+div#past-timers table tbody tr:nth-child(odd) {
+  background-color: rgba(187, 224, 189, 0.536);
+}
+div#past-timers table tbody tr:nth-child(even) {
+  background-color: #bbe0bd;
+}
+@media screen and (max-width: 1440px) {
+  div#past-timers {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .svg-button {
+    margin: 0.3em 0.3em;
+  }
+  .svg-button svg {
+    padding: 0.5em;
+    width: 1.5em;
+  }
+  .tab-button {
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 1vh 0.2vw;
+    padding: 2px;
+    font-size: 1em;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 6em;
+  }
+  .tab-button.active {
+    border-bottom: 5px solid #bbe0bd;
+    transition: border-bottom 0.2s ease;
+  }
+  .tab-button:hover {
+    cursor: pointer;
+  }
+  .tab-button .icon {
+    font-size: 0.7em;
+    margin-bottom: 4px;
+  }
+}
